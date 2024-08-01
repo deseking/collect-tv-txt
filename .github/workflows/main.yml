@@ -2,13 +2,15 @@ name: 'Daily Job'
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 每天UTC时间00:00运行
+    - cron: '0 0 * * *'  # 每天shanghai时间00:00运行
   workflow_dispatch:
     inputs:
       environment:
         description: 'Mode to run the workflow'
         required: true
         default: 'play'
+env:
+  TZ: Asia/Shanghai
 
 jobs:
   run_job:
