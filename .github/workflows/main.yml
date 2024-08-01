@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Environment to deploy to'
+        description: 'Mode to run the workflow'
         required: true
-        default: 'production'
+        default: 'play'
 
 jobs:
   run_job:
